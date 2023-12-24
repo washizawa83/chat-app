@@ -1,3 +1,6 @@
+<script>
+</script>
+
 <section class="home-sidebar">
   <ui class="sidebar-menu">
     <li class="sidebar-menu-item">Home</li>
@@ -19,6 +22,9 @@
   }
   .sidebar-menu-item {
     margin-bottom: 35px;
-    font-size: 18px;
+    font-size: 16px;
+  }
+  .map-marker {
+    color: tomato;
   }
 </style>

@@ -114,6 +114,6 @@
     color: white;
     font-size: 18px;
     border-radius: 12px;
-    border: 1px solid #333;
+    border: none;
   }
 </style>
