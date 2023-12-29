@@ -40,3 +40,6 @@ export const testReplyMessages = writable([
         updated: "2023/12/23 19:30"
     }
 ])
+
+// 現在地取得フラグ
+export const isGetLocation = writable(false)

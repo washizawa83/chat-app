@@ -1,33 +1,32 @@
 <script>
-  import { onMount } from "svelte";
-  import { selectedReplyMessage, replyMessages, testReplyMessages } from "../../store"
+  import {
+    selectedReplyMessage,
+    replyMessages,
+    testReplyMessages,
+  } from "../../stores/ChatStore";
 
   export let message;
-  let isMessageFormVisible = false
-
-  onMount(() => {
-    isMessageFormVisible = Boolean(message.id === $selectedReplyMessage?.id)
-  })
 
   const onClickReplay = (message) => {
-    changeSelectReplyMessage(message)
-    getReplyMessages(message)
-  }
+    changeSelectReplyMessage(message);
+    getReplyMessages(message);
+  };
 
   const changeSelectReplyMessage = (message) => {
-    $selectedReplyMessage = message
-  }
+    $selectedReplyMessage = message;
+  };
 
   const getReplyMessages = (selectedMessage) => {
-    $replyMessages = $testReplyMessages.filter((message) => message.messageId === selectedMessage.id)
-  }
-
-  const onClickCloseButton = () => {
-    $selectedReplyMessage = null
-  }
+    $replyMessages = $testReplyMessages.filter(
+      (message) => message.messageId === selectedMessage.id
+    );
+  };
 </script>
 
-<div class="chat-message-wrap" class:is-selected-replay-message={ message.id === $selectedReplyMessage?.id}>
+<div
+  class="chat-message-wrap"
+  class:is-selected-replay-message={message.id === $selectedReplyMessage?.id}
+>
   <div class="chat-message-headline message-padding">
     <div class="chat-message-headline-user"></div>
     <span class="chat-message-headline-datetime">{message.updated}</span>
@@ -63,7 +62,7 @@
   .chat-message-headline-user {
     width: 30px;
     height: 30px;
-    background-color: cadetblue;
+    background-color: rgb(79, 77, 103);
     border-radius: 50%;
     overflow: hidden;
   }

@@ -7,6 +7,6 @@
 <Router>
   <main>
     <Route path="/" component={TopPageComponent} />
-    <Route path="/home" component={HomePageComponent} />
+    <Route path="/home/*." component={HomePageComponent} />
   </main>
 </Router>
